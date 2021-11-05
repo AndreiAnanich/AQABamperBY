@@ -21,7 +21,7 @@ public class TestFilter {
         driver.findElement(By.xpath("//*[@id=\"select2-god1-container\"]")).click();
         driver.findElement(By.xpath("/html/body/span/span/span[1]/input")).sendKeys(new CharSequence[]{"2000\n"});
         driver.findElement(By.xpath("//*[@id=\"select2-god2-container\"]")).click();
-        driver.findElement(By.xpath("/html/body/span/span/span[1]/input")).sendKeys(new CharSequence[]{"2010\n"});
+        driver.findElement(By.xpath("/html/body/span/span/span[1]/input")).sendKeys(new CharSequence[]{"2020\n"});
         driver.findElement(By.xpath("//*[@id=\"select2-zapchast-container\"]")).click();
         driver.findElement(By.xpath("/html/body/span/span/span[1]/input")).sendKeys(new CharSequence[]{"Клапан управления\n"});
         driver.findElement(By.name("originalnum")).sendKeys(new CharSequence[]{"96"});
