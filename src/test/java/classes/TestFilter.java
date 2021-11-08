@@ -1,12 +1,15 @@
 package classes;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
 public class TestFilter {
+
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -29,8 +32,11 @@ public class TestFilter {
         driver.findElement(By.xpath("/html/body/span/span/span[1]/input")).sendKeys(new CharSequence[]{"БигШРОТ\n"});
         driver.findElement(By.xpath("//*[@id=\"price-ot\"]")).sendKeys(new CharSequence[]{"5"});
         driver.findElement(By.xpath("//*[@id=\"price-do\"]")).sendKeys(new CharSequence[]{"100"});
-        driver.findElement(By.xpath("/html/body/div[3]/div[3]/div/div[2]/div[1]/aside/aside[1]/form/div/div[31]/div[1]/button")).click();
-        driver.findElement(By.id("js-filter-loader")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+       driver.findElement(By.id("js-filter-counter")).click();
 
-    }
-}
+
+
+
+
+}}
